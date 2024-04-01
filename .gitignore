@@ -1,0 +1,65 @@
+## ASP.NET Core specific
+# Ignore appsettings containing sensitive information
+**/appsettings.production.json
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# ASP.NET Scaffolding
+wwwroot/
+**/wwwroot/
+!wwwroot/favicon.ico
+!wwwroot/web.config
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+.vscode/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+*.pubxml
+/MockFinancialInstitutionWeb/Properties/ServiceDependencies/MockFinancialInstitution - Zip Deploy
+/ClosingConsolidationService/Properties/ServiceDependencies/ClosingApi - Zip Deploy
+/CreditService/Properties/ServiceDependencies/CreditApi - Zip Deploy
+/MockFinancialInstitution/Properties/ServiceDependencies/AppraisalAPI - Zip Deploy

@@ -1,0 +1,103 @@
+﻿@model MockFinancialInstitutionWeb.Models.ViewModels.HomeInfoViewModel
+
+@{
+    ViewData["Title"] = "Home Information";
+}
+
+<style>
+    .compact-card {
+        margin: 5px;
+        padding: 10px;
+    }
+
+</style>
+
+<div class="container mt-5">
+    <h2 class="mb-3">Financial Institution Dashboard</h2>
+
+    <div class="col-12 mt-4">
+        <h3 class="mb-3">System Health Checks</h3>
+        <div class="card-deck">
+            <div class="card compact-card">
+                <div class="card-header">
+                    Health Check V1
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Basic System Uptime</h5>
+                    <p class="card-text">@Model.HealthCheckV1</p>
+                </div>
+            </div>
+
+            <div class="card compact-card">
+                <div class="card-header">
+                    Health Check V2
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Service Health Details</h5>
+                    <p class="card-text">@Model.HealthCheckV2</p>
+                </div>
+            </div>
+
+            <div class="card compact-card">
+                <div class="card-header">
+                    Health Check V3
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Comprehensive Diagnostics</h5>
+                    <p class="card-text">@Model.HealthCheckV3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="mb-3">Customer Information</h2>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Your Current Credit Score
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@Model.CreditScore</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Current Appraisal Value of the Home
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@Model.HomeAppraisalValue</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Upload Document
+                </div>
+                <div class="card-body">
+                    @using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <div class="form-group mb-3">
+                            <label for="file" class="mb-2">Document about the House:</label>
+                            <input type="file" name="file" class="form-control-file" id="file">
+                        </div>
+                        <div class="mb-3">
+                            <h5 class="card-title">@Model.DocumentUploadResult</h5>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
